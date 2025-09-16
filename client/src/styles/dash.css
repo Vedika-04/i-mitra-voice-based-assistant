@@ -1,0 +1,13 @@
+@import "tailwindcss";
+/* dashboard.css */
+.dashboard-buttons {
+  display: flex;
+  flex-wrap: wrap; /* allows buttons to go to next line if not enough space */
+  justify-content: center;
+  gap: 16px; /* spacing between buttons */
+}
+
+.dashboard-buttons button {
+  flex: 1 1 150px; /* grow, shrink, base width */
+  max-width: 200px; /* optional: limit button width */
+}

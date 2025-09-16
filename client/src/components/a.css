@@ -1,0 +1,73 @@
+/* styles.css */
+
+/* Base modal styles */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Mobile padding */
+  overflow-y: auto;
+}
+
+.modal {
+  width: 100%;
+  max-width: 48rem; /* max-w-2xl equivalent */
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 640px) {
+  .modal-container {
+    padding: 0.5rem;
+  }
+
+  .modal {
+    max-width: 100%;
+  }
+
+  /* Stack location inputs */
+  .location-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Smaller previews */
+  .preview-img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .preview-video {
+    width: 6rem;
+    height: 4rem;
+  }
+
+  /* Stack actions */
+  .actions {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) {
+  .modal-container {
+    padding: 1rem;
+  }
+
+  .location-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 0.5rem;
+  }
+}
+
+/* Add this class to file upload sections for better mobile touch */
+.file-drop {
+  padding: 1.5rem;
+  min-height: 6rem; /* Ensure tappable area on mobile */
+}
